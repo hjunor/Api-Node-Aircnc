@@ -11,7 +11,8 @@ mongoose.connect(`mongodb+srv://${process.env.USER}:${process.env.SENHA}@goweek-
 }).then( res =>
   console.log("conectado ao banco de dados com exito")
   )
-
 app.use(express.json());
+
+app.use(routes);
 
 app.listen(process.env.PORT || 3000);
